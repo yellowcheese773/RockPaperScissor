@@ -48,7 +48,7 @@ function game() {
 
         result = playRound(userChoice, computerChoice)
 
-        if (result.contains("Lose")) {
+        if (result.includes("Lose")) {
             computerScore = computerScore + 1
         }
         else userScore = userScore + 1
