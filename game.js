@@ -36,3 +36,30 @@ function playRound(playerSelection, computerSelection) {
     }
 
 }
+
+function game() {
+    userScore = 0
+    computerScore = 0
+    while (true) {
+
+        userChoice = prompt("Rock, Paper or Scissor?")
+
+        computerChoice = getComputerChoice()
+
+        result = playRound(userChoice, computerChoice)
+
+        if (result.contains("Lose")) {
+            computerScore = computerScore + 1
+        }
+        else userScore = userScore + 1
+
+        if (userScore == 5) {
+            console.log("User has won!")
+            break;
+        }
+        if (computerScore == 5) {
+            console.log("computer has won!")
+            break;
+        }
+    }
+}
