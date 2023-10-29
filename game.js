@@ -41,6 +41,7 @@ function game() {
     userScore = 0
     computerScore = 0
     while (true) {
+        round = 1
 
         userChoice = prompt("Rock, Paper or Scissor?")
 
@@ -61,5 +62,7 @@ function game() {
             console.log("computer has won!")
             break;
         }
+
+        console.log("Score for Round " + round + " user: " + userScore + " computer: " + computerScore)
     }
 }
