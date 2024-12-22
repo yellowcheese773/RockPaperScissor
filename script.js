@@ -46,3 +46,23 @@ function playRound(humanChoice, computerChoice) {
     }
 
 }
+
+function playGame() {
+    for (i = 0; i < 5; i++) {
+        const computerChoice1 = getComputerChoice()
+        const humanChoice1 = getHumanChoice()
+        playRound(humanChoice1, computerChoice1)
+
+    }
+    if (humanScore > computerScore) {
+        console.log("You have won " + humanScore + " to " + computerScore)
+    }
+    else if (humanScore < computerScore) {
+        console.log("You have lost " + humanScore + " to " + computerScore)
+    }
+    else {
+        console.log("equal " + humanScore + " to " + computerScore)
+    }
+
+
+}
