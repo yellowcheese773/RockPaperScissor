@@ -1,4 +1,5 @@
-console.log("deine mutter")
+let humanScore = 0
+let computerScore = 0
 
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3) + 1;
@@ -11,6 +12,37 @@ function getComputerChoice() {
     }
     else if (num === 3) {
         return "scissor"
+    }
+
+}
+
+function getHumanChoice() {
+    let answer = prompt("whats your move?")
+    return answer
+}
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase()
+
+    if (humanChoice === computerChoice) {
+        console.log("Nobody wins, you have " + humanChoice + " computer has " + computerChoice)
+    }
+
+    else if (humanChoice === "paper" && computerChoice === "rock") {
+        console.log("You win, paper beats rock")
+        humanScore++
+    }
+    else if (humanChoice === "rock" && computerChoice === "scissor") {
+        console.log("You win, rock beat scissor")
+        humanScore++
+    }
+    else if (humanChoice === "scissor" && computerChoice === "paper") {
+        console.log("You win, scissor beats paper")
+        humanScore++
+    }
+    else {
+        console.log("You have lost, " + computerChoice + " beats " + humanChoice)
+        computerScore++
     }
 
 }
